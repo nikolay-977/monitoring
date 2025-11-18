@@ -1,0 +1,1374 @@
+{
+	"info": {
+		"_postman_id": "bdbc5d6e-4be6-4aac-9ed3-a33e1434bab1",
+		"name": "Learning Platform API",
+		"description": "Complete API collection for Learning Platform testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14764798"
+	},
+	"item": [
+		{
+			"name": "📊 Answer Options",
+			"item": [
+				{
+					"name": "Create Answer Option",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"text\": \"Правильный ответ\",\n  \"isCorrect\": true,\n  \"explanation\": \"Это правильный ответ потому что...\",\n  \"points\": 10.0,\n  \"orderIndex\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/question/1?text=Правильный ответ&isCorrect=true&explanation=Объяснение&points=10.0&orderIndex=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"question",
+								"1"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "Правильный ответ"
+								},
+								{
+									"key": "isCorrect",
+									"value": "true"
+								},
+								{
+									"key": "explanation",
+									"value": "Объяснение"
+								},
+								{
+									"key": "points",
+									"value": "10.0"
+								},
+								{
+									"key": "orderIndex",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Answer Option",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/question/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"question",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Correct Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/question/1/correct",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"question",
+								"1",
+								"correct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Answer Option",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"text\": \"Обновленный ответ\",\n  \"isCorrect\": false,\n  \"explanation\": \"Обновленное объяснение\",\n  \"points\": 5.0,\n  \"orderIndex\": 2\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Question Options",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/question/1/validate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"question",
+								"1",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/answer-options/question/1/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"answer-options",
+								"question",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "📁 Categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/categories?name=Программирование&description=Курсы по программированию",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Программирование"
+								},
+								{
+									"key": "description",
+									"value": "Курсы по программированию"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Root Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories/roots",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"roots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Subcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories/1/subcategories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category with Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories/1/with-courses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1",
+								"with-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories/1/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/categories/1?name=Обновленное программирование&description=Новое описание",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Обновленное программирование"
+								},
+								{
+									"key": "description",
+									"value": "Новое описание"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "⭐ Reviews",
+			"item": [
+				{
+					"name": "Create Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/reviews?studentId=1&courseId=1&rating=5&comment=Отличный курс!",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "studentId",
+									"value": "1"
+								},
+								{
+									"key": "courseId",
+									"value": "1"
+								},
+								{
+									"key": "rating",
+									"value": "5"
+								},
+								{
+									"key": "comment",
+									"value": "Отличный курс!"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/reviews/course/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								"course",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Review Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/reviews/course/1/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								"course",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/reviews/1?rating=4&comment=Обновленный отзыв",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								"1"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "4"
+								},
+								{
+									"key": "comment",
+									"value": "Обновленный отзыв"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "📈 Progress Tracking",
+			"item": [
+				{
+					"name": "Update Progress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/progress/lesson/1/student/1?progress=75.0&timeSpent=300",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"progress",
+								"lesson",
+								"1",
+								"student",
+								"1"
+							],
+							"query": [
+								{
+									"key": "progress",
+									"value": "75.0"
+								},
+								{
+									"key": "timeSpent",
+									"value": "300"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Video Progress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/progress/lesson/1/student/1/video?currentPosition=1200&timeSpent=60",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"progress",
+								"lesson",
+								"1",
+								"student",
+								"1",
+								"video"
+							],
+							"query": [
+								{
+									"key": "currentPosition",
+									"value": "1200"
+								},
+								{
+									"key": "timeSpent",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark as Completed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/progress/lesson/1/student/1/complete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"progress",
+								"lesson",
+								"1",
+								"student",
+								"1",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Progress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/progress/student/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"progress",
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/progress/student/1/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"progress",
+								"student",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "👤 Profiles",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/profiles/users/1?bio=О%20себе...&avatarUrl=https://example.com/avatar.jpg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/profiles/users/1?bio=О%20себе...&avatarUrl=https://example.com/avatar.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"profiles",
+								"users",
+								"1"
+							],
+							"query": [
+								{
+									"key": "bio",
+									"value": "О%20себе..."
+								},
+								{
+									"key": "avatarUrl",
+									"value": "https://example.com/avatar.jpg"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \"http://localhost:8080/api/profiles/users/1?bio=О%20себе...&avatarUrl=https://example.com/avatar.jpg\""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/profiles/users/1?bio=О себе...&avatarUrl=https://example.com/avatar.jpg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"profiles",
+								"users",
+								"1"
+							],
+							"query": [
+								{
+									"key": "bio",
+									"value": "О себе..."
+								},
+								{
+									"key": "avatarUrl",
+									"value": "https://example.com/avatar.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/profiles/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"profiles",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bio\": \"Обновленная информация о себе\",\n  \"phoneNumber\": \"+79991234567\",\n  \"country\": \"Россия\",\n  \"city\": \"Москва\",\n  \"emailNotifications\": false,\n  \"courseUpdates\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/profiles/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"profiles",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Avatar",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/profiles/users/1/avatar?avatarUrl=https://example.com/new-avatar.jpg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"profiles",
+								"users",
+								"1",
+								"avatar"
+							],
+							"query": [
+								{
+									"key": "avatarUrl",
+									"value": "https://example.com/new-avatar.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification Settings",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/profiles/users/1/notifications?emailNotifications=false&courseUpdates=true&assignmentReminders=false",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"profiles",
+								"users",
+								"1",
+								"notifications"
+							],
+							"query": [
+								{
+									"key": "emailNotifications",
+									"value": "false"
+								},
+								{
+									"key": "courseUpdates",
+									"value": "true"
+								},
+								{
+									"key": "assignmentReminders",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "📝 Quiz Submissions",
+			"item": [
+				{
+					"name": "Start Quiz Attempt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/quiz-submissions/start?studentId=1&quizId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"quiz-submissions",
+								"start"
+							],
+							"query": [
+								{
+									"key": "studentId",
+									"value": "1"
+								},
+								{
+									"key": "quizId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"1\": [1, 2],\n  \"2\": [3],\n  \"3\": [4, 5, 6]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/quiz-submissions/1/submit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"quiz-submissions",
+								"1",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Quiz Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/quiz-submissions/quiz/1/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"quiz-submissions",
+								"quiz",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Can Attempt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/quiz-submissions/can-attempt?studentId=1&quizId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"quiz-submissions",
+								"can-attempt"
+							],
+							"query": [
+								{
+									"key": "studentId",
+									"value": "1"
+								},
+								{
+									"key": "quizId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "📤 Submissions",
+			"item": [
+				{
+					"name": "Submit Text Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/submissions/text?studentId=1&assignmentId=1&content=Текст моего задания",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"submissions",
+								"text"
+							],
+							"query": [
+								{
+									"key": "studentId",
+									"value": "1"
+								},
+								{
+									"key": "assignmentId",
+									"value": "1"
+								},
+								{
+									"key": "content",
+									"value": "Текст моего задания"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit File Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/submissions/file?studentId=1&assignmentId=1&fileUrl=https://example.com/file.pdf&fileName=assignment.pdf&fileSize=1024000",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"submissions",
+								"file"
+							],
+							"query": [
+								{
+									"key": "studentId",
+									"value": "1"
+								},
+								{
+									"key": "assignmentId",
+									"value": "1"
+								},
+								{
+									"key": "fileUrl",
+									"value": "https://example.com/file.pdf"
+								},
+								{
+									"key": "fileName",
+									"value": "assignment.pdf"
+								},
+								{
+									"key": "fileSize",
+									"value": "1024000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grade Submission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/submissions/1/grade?score=85.0&feedback=Хорошая работа!&gradedBy=teacher1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"submissions",
+								"1",
+								"grade"
+							],
+							"query": [
+								{
+									"key": "score",
+									"value": "85.0"
+								},
+								{
+									"key": "feedback",
+									"value": "Хорошая работа!"
+								},
+								{
+									"key": "gradedBy",
+									"value": "teacher1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Comment to Submission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/submissions/1/comments?content=Интересный подход&authorId=2&isInstructorComment=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"submissions",
+								"1",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "content",
+									"value": "Интересный подход"
+								},
+								{
+									"key": "authorId",
+									"value": "2"
+								},
+								{
+									"key": "isInstructorComment",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Assignment Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/submissions/assignment/1/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"submissions",
+								"assignment",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "🏷️ Tags",
+			"item": [
+				{
+					"name": "Create Tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tags?name=Java&description=Программирование на Java&colorCode=%23FF0000",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Java"
+								},
+								{
+									"key": "description",
+									"value": "Программирование на Java"
+								},
+								{
+									"key": "colorCode",
+									"value": "#FF0000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tags",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tags/search?query=java",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "java"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Tags to Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"Java\", \"Spring\", \"Programming\"]"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tags/course/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								"course",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tag Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tags/statistics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "🏥 Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log('Starting request to ' + pm.request.url);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test(\"Response time is acceptable\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
