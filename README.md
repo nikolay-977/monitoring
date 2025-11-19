@@ -19,9 +19,5 @@ docker build -t monitoring-demo-app:latest .
 
 ## Запуск приложения
 ```bash
-java -jar target/monitoring-0.0.1-SNAPSHOT.jar
+java -jar target/monitoring-demo-app-0.0.1-SNAPSHOT.jar
 ```
-
-## Postman-коллекция для тестировавния
-
-[Learning Platform API.postman_collection.json](src/test/resources/postman/Learning%20Platform%20API.postman_collection.json)
