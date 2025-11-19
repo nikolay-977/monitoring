@@ -1,48 +1,15 @@
-server:
-  port: 8080
-
 spring:
   application:
-    name: monitoring
+    name: monitoring-demo-app
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,prometheus,env,beans
-      base-path: /actuator
-    enabled-by-default: true
+        include: *
   endpoint:
     health:
       show-details: always
-      show-components: always
-    prometheus:
-      enabled: true
-    metrics:
-      enabled: true
   metrics:
-    export:
-      prometheus:
-        enabled: true
-        step: 1m
-    distribution:
-      percentiles-histogram:
-        http.server.requests: true
-      percentiles:
-        http.server.requests: 0.5, 0.95, 0.99
-      sla:
-        http.server.requests: 100ms, 500ms, 1s
     tags:
-      application: ${spring.application.name}
-      environment: development
-    enable:
-      jvm: true
-      logback: true
-      system: true
-      process: true
-
-logging:
-  level:
-    ru.skillfactory.monitoring: INFO
-  pattern:
-    level: INFO
+      application: monitoring-demo-app
